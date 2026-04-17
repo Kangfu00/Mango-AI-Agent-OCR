@@ -165,7 +165,7 @@ MOCK_ERP = {
 }
 
 def render_ui():
-    st.title("🍊 Mango Intelligent Receipt Agent (100% Typhoon AI)")
+    st.title("🍊 Mango Intelligent Receipt Agent")
 
     uploaded_file = st.file_uploader("เลือกรูปใบเสร็จเพื่อทดสอบ (JPG, PNG)", type=["jpg", "png", "jpeg"])
     
