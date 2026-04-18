@@ -244,7 +244,7 @@ def render_ui():
 
                 st.markdown("#### 🔹 รายการสินค้า (Line Items)")
                 items_df = pd.DataFrame(ai_data.get("items", []))
-                edited_items = st.data_editor(items_df, num_rows="dynamic", use_column_width=True)
+                edited_items = st.data_editor(items_df, num_rows="dynamic", use_container_width=True)
 
                 st.markdown("#### 🔹 สรุปยอดเงิน (Financial Summary)")
                 cc1, cc2, cc3 = st.columns(3)
