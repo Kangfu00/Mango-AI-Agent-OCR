@@ -206,7 +206,7 @@ def render_ui():
 
         with col_img:
             st.subheader("🖼️ ต้นฉบับเอกสาร")
-            st.image(image, use_container_width=True)
+            st.image(image, use_column_width=True)
 
         with col_data:
             st.subheader("📝 ตรวจสอบข้อมูลบัญชี")
@@ -244,7 +244,7 @@ def render_ui():
 
                 st.markdown("#### 🔹 รายการสินค้า (Line Items)")
                 items_df = pd.DataFrame(ai_data.get("items", []))
-                edited_items = st.data_editor(items_df, num_rows="dynamic", use_container_width=True)
+                edited_items = st.data_editor(items_df, num_rows="dynamic", use_column_width=True)
 
                 st.markdown("#### 🔹 สรุปยอดเงิน (Financial Summary)")
                 cc1, cc2, cc3 = st.columns(3)
@@ -343,7 +343,7 @@ def render_ui():
                 })
                 
         summary_df = pd.DataFrame(all_rows)
-        st.dataframe(summary_df, use_container_width=True)
+        st.dataframe(summary_df, use_column_width=True)
         
         csv = summary_df.to_csv(index=False).encode('utf-8-sig')
         
@@ -354,7 +354,7 @@ def render_ui():
                 data=csv,
                 file_name="mango_receipt_records.csv",
                 mime="text/csv",
-                use_container_width=True
+                use_column_width=True
             )
 
 if __name__ == "__main__":
