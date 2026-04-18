@@ -343,7 +343,7 @@ def render_ui():
                 })
                 
         summary_df = pd.DataFrame(all_rows)
-        st.dataframe(summary_df, use_column_width=True)
+        st.dataframe(summary_df, use_container_width=True)
         
         csv = summary_df.to_csv(index=False).encode('utf-8-sig')
         
@@ -354,7 +354,7 @@ def render_ui():
                 data=csv,
                 file_name="mango_receipt_records.csv",
                 mime="text/csv",
-                use_column_width=True
+                use_container_width=True
             )
 
 if __name__ == "__main__":
