@@ -350,7 +350,7 @@ def render_ui():
         col_space, col_btn = st.columns([8, 2])
         with col_btn:
             st.download_button(
-                label="📥 ดาวน์โหลด CSV",
+                label="📥 ดาวน์โหลด CSVหหหหห",
                 data=csv,
                 file_name="mango_receipt_records.csv",
                 mime="text/csv",
